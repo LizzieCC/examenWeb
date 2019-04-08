@@ -1,8 +1,12 @@
+const path = require('path')
 const express = require('express')
 const app = express()
 const met = require('./met.js')
 
 const port = process.env.PORT || 3000;
+
+const publicDir = path.join(__dirname,'public')
+app.use(express.static(publicDir))
 
 app.get('/',function(req, res){
     res.send('<h1> I work! </h1>')
