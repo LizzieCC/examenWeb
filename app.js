@@ -61,7 +61,7 @@ app.get('*', function(req,res){
         error: 'Esta ruta no existe, pero aqui va un chiste: Why don’t scientists trust atoms? .... Because they make up everything! :v'
     })*/
     res.send('<h1 style="color:purple;margin-left:30px;font-size: 140px;"> ERROR </h1>'+
-    '<h2> Esta ruta no existe, pero aqui va un chiste: Why don’t scientists trust atoms? .... Because they make up everything! :v </h2>')
+    '<h2 style="margin-left:30px;font-size: 100px;"> Esta ruta no existe, pero aqui va un chiste: Why don’t scientists trust atoms? .... Because they make up everything! :v </h2>')
 })
 
 app.listen(port,function(){
