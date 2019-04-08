@@ -9,7 +9,7 @@ const publicDir = path.join(__dirname,'public')
 app.use(express.static(publicDir))
 
 app.get('/',function(req, res){
-    res.send('<h1> I work! </h1>')
+    res.send('<h1 color:purple;margin-left:30px;font-size: 140px;"> I work! </h1>')
 })
 
 app.get('/students/:id',function(req, res){
@@ -57,9 +57,11 @@ app.get('/met',function(req,res){
     })
 })
 app.get('*', function(req,res){
-    res.send({
+    /*res.send({
         error: 'Esta ruta no existe, pero aqui va un chiste: Why don’t scientists trust atoms? .... Because they make up everything! :v'
-    })
+    })*/
+    res.send('<h1 color:purple;margin-left:30px;font-size: 140px;"> ERROR </h1>'+
+    '<h2> Esta ruta no existe, pero aqui va un chiste: Why don’t scientists trust atoms? .... Because they make up everything! :v </h2>')
 })
 
 app.listen(port,function(){
