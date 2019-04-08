@@ -13,11 +13,6 @@ app.get('/',function(req, res){
 })
 
 app.get('/students/:id',function(req, res){
-    /*if(!req.params.id){
-        return res.send({
-            error: 'Por favor pon una matrícula'
-        })
-    }*/
    if(req.params.id !=="A01196463"){
         return res.send({
             error: 'Esa matrícula no existe :c'
@@ -63,7 +58,7 @@ app.get('/met',function(req,res){
 })
 app.get('*', function(req,res){
     res.send({
-        error: 'Esta ruta no existe, pero aqui va un chiste:  '
+        error: 'Esta ruta no existe, pero aqui va un chiste: Why don’t scientists trust atoms? .... Because they make up everything! :v'
     })
 })
 
